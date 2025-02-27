@@ -1,0 +1,51 @@
+---
+receivers:
+  hostmetrics:
+    collection_interval: 1m
+    scrapers:
+      cpu:
+      disk:
+      filesystem:
+      load:
+      memory:
+      network:
+      paging:
+
+processors:
+  attributes/copyfromexistingkey:
+    actions:
+      - action: upsert
+        key: service.namespace
+        value: ne-sachirou
+      - action: upsert
+        key: service.name
+        value: ne-sachirou-pc-macbook
+  batch:
+    timeout: 1m
+  resourcedetection/system:
+    detectors: ["system"]
+    system:
+      hostname_sources: ["os"]
+
+exporters:
+  otlp/mackerel:
+    endpoint: otlp.mackerelio.com:4317
+    # endpoint: michizane.mackerel-staging.hatena.sh:4317
+    # endpoint: localhost:4318
+    # tls:
+    #   insecure: true
+    compression: gzip
+    headers:
+      Mackerel-Api-Key: ${env:MACKEREL_APIKEY}
+
+service:
+  pipelines:
+    metrics:
+      receivers:
+        - hostmetrics
+      processors:
+        - attributes/copyfromexistingkey
+        - batch
+        - resourcedetection/system
+      exporters:
+        - otlp/mackerel
