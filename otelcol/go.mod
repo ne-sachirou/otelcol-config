@@ -11,7 +11,7 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver v0.120.1
 	go.opentelemetry.io/collector/component v1.27.0
 	go.opentelemetry.io/collector/confmap v1.27.0
-	go.opentelemetry.io/collector/confmap/provider/envprovider v1.26.0
+	go.opentelemetry.io/collector/confmap/provider/envprovider v1.27.0
 	go.opentelemetry.io/collector/confmap/provider/fileprovider v1.26.0
 	go.opentelemetry.io/collector/confmap/provider/yamlprovider v1.26.0
 	go.opentelemetry.io/collector/connector v0.120.0
