@@ -4,7 +4,7 @@ SHELL=/bin/bash
 help:
 	@awk -F':.*##' '/^[-_a-zA-Z0-9]+:.*##/{printf"%-12s\t%s\n",$$1,$$2}' $(MAKEFILE_LIST) | sort
 
-OCB_VERSION=0.120.0
+OCB_VERSION=0.121.0 # 1.27.0
 
 .PHONY: download-ocb
 download-ocb: ## Download OpenTelemetry Collector Builder
