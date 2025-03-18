@@ -30,6 +30,6 @@ install-otelcol: otelcol/otelcol ## Install OpenTelemetry Collector
 
 .PHOMY: lint
 lint: ## Lint the code
-	shellcheck *.sh
 	yamllint *.yaml || true
+	otelcol/otelcol validate --config otelcol-config.yaml
 	plutil -lint com.github.open-telemetry.opentelemetry-collector.plist
