@@ -1,0 +1,33 @@
+---
+name: on pull_request
+
+"on":
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  lint-gha:
+    name: Lint GitHub Actions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: reviewdog/action-yamllint@v1
+        with:
+          fail_level: error
+          reporter: github-pr-review
+      - uses: reviewdog/action-actionlint@v1
+        with:
+          fail_on_error: true
+          reporter: github-pr-review
+  verify-otelcol-code:
+    name: Check if the code of otelcol can be built
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+      - name: go build
+        run: go build -o /dev/null
+        working-directory: otelcol

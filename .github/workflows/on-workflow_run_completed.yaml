@@ -1,0 +1,28 @@
+---
+name: on workflow_run completed
+
+"on":
+  workflow_run:
+    workflows:
+      - on pull_request
+    types:
+      - completed
+
+jobs:
+  otel-cicd-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get the workflow filename
+        id: get-the-workflow-filename
+        # yamllint disable rule:line-length
+        run: |
+          echo -n "${{github.event.workflow_run.path}}" | \
+          node -e 'console.info("filename=" + /([^/]+)\.ya?ml$/.exec(require("fs").readFileSync(0, "utf-8"))[1])' >> "$GITHUB_OUTPUT"
+        # yamllint enable rule:line-length
+      - uses: corentinmusard/otel-cicd-action@v2
+        with:
+          githubToken: ${{secrets.GITHUB_TOKEN}}
+          otelServiceName: ${{steps.get-the-workflow-filename.outputs.filename}}
+          otlpEndpoint: https://otlp-vaxila.mackerelio.com/v1/traces
+          otlpHeaders: Accept=*/*,Mackerel-Api-Key=${{secrets.MACKEREL_APIKEY}}
+          runId: ${{github.event.workflow_run.id}}
