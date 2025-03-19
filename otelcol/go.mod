@@ -21,7 +21,7 @@ require (
 	go.opentelemetry.io/collector/exporter/debugexporter v0.122.1
 	go.opentelemetry.io/collector/exporter/otlpexporter v0.122.1
 	go.opentelemetry.io/collector/extension v1.28.1
-	go.opentelemetry.io/collector/otelcol v0.122.0
+	go.opentelemetry.io/collector/otelcol v0.122.1
 	go.opentelemetry.io/collector/processor v0.122.1
 	go.opentelemetry.io/collector/processor/batchprocessor v0.122.1
 	go.opentelemetry.io/collector/receiver v1.28.1
@@ -175,8 +175,8 @@ require (
 	go.opentelemetry.io/collector/config/configtelemetry v0.122.1 // indirect
 	go.opentelemetry.io/collector/config/configtls v1.28.1 // indirect
 	go.opentelemetry.io/collector/confmap/xconfmap v0.122.1 // indirect
-	go.opentelemetry.io/collector/connector/connectortest v0.122.0 // indirect
-	go.opentelemetry.io/collector/connector/xconnector v0.122.0 // indirect
+	go.opentelemetry.io/collector/connector/connectortest v0.122.1 // indirect
+	go.opentelemetry.io/collector/connector/xconnector v0.122.1 // indirect
 	go.opentelemetry.io/collector/consumer v1.28.1 // indirect
 	go.opentelemetry.io/collector/consumer/consumererror v0.122.1 // indirect
 	go.opentelemetry.io/collector/consumer/consumererror/xconsumererror v0.122.1 // indirect
@@ -186,7 +186,7 @@ require (
 	go.opentelemetry.io/collector/exporter/exportertest v0.122.1 // indirect
 	go.opentelemetry.io/collector/exporter/xexporter v0.122.1 // indirect
 	go.opentelemetry.io/collector/extension/extensionauth v0.122.1 // indirect
-	go.opentelemetry.io/collector/extension/extensioncapabilities v0.122.0 // indirect
+	go.opentelemetry.io/collector/extension/extensioncapabilities v0.122.1 // indirect
 	go.opentelemetry.io/collector/extension/extensiontest v0.122.1 // indirect
 	go.opentelemetry.io/collector/extension/xextension v0.122.1 // indirect
 	go.opentelemetry.io/collector/featuregate v1.28.1 // indirect
@@ -207,9 +207,9 @@ require (
 	go.opentelemetry.io/collector/receiver/xreceiver v0.122.1 // indirect
 	go.opentelemetry.io/collector/scraper v0.122.0 // indirect
 	go.opentelemetry.io/collector/scraper/scraperhelper v0.122.0 // indirect
-	go.opentelemetry.io/collector/semconv v0.122.0 // indirect
-	go.opentelemetry.io/collector/service v0.122.0 // indirect
-	go.opentelemetry.io/collector/service/hostcapabilities v0.122.0 // indirect
+	go.opentelemetry.io/collector/semconv v0.122.1 // indirect
+	go.opentelemetry.io/collector/service v0.122.1 // indirect
+	go.opentelemetry.io/collector/service/hostcapabilities v0.122.1 // indirect
 	go.opentelemetry.io/contrib/bridges/otelzap v0.10.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.60.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.60.0 // indirect
