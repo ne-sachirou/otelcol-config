@@ -12,7 +12,7 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.122.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver v0.122.0
 	go.opentelemetry.io/collector/component v1.28.0
-	go.opentelemetry.io/collector/confmap v1.28.0
+	go.opentelemetry.io/collector/confmap v1.28.1
 	go.opentelemetry.io/collector/confmap/provider/envprovider v1.28.0
 	go.opentelemetry.io/collector/confmap/provider/fileprovider v1.28.0
 	go.opentelemetry.io/collector/confmap/provider/yamlprovider v1.28.0
@@ -189,7 +189,7 @@ require (
 	go.opentelemetry.io/collector/extension/extensioncapabilities v0.122.0 // indirect
 	go.opentelemetry.io/collector/extension/extensiontest v0.122.0 // indirect
 	go.opentelemetry.io/collector/extension/xextension v0.122.0 // indirect
-	go.opentelemetry.io/collector/featuregate v1.28.0 // indirect
+	go.opentelemetry.io/collector/featuregate v1.28.1 // indirect
 	go.opentelemetry.io/collector/filter v0.122.0 // indirect
 	go.opentelemetry.io/collector/internal/fanoutconsumer v0.122.0 // indirect
 	go.opentelemetry.io/collector/internal/sharedcomponent v0.122.0 // indirect
