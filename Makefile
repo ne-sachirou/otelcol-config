@@ -15,7 +15,12 @@ download-ocb: ## Download OpenTelemetry Collector Builder
 
 .PHONY: build-otelcol
 build-otelcol: ocb ## Build OpenTelemetry Collector
-	./ocb --config builder-config.yaml
+	(cd otelcol && go mod tidy)
+	./ocb --config builder-config.yaml --skip-generate
+
+.PHONY: generate-otelcol-code
+generate-otelcol-code: ## Generate OpenTelemetry Collector code
+	./ocb --config builder-config.yaml --skip-compilation
 
 .PHONY: install-otelcol
 install-otelcol: otelcol/otelcol ## Install OpenTelemetry Collector
