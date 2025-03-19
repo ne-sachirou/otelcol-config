@@ -30,3 +30,4 @@ jobs:
       - uses: actions/setup-go@v5
       - name: go build
         run: go build -o /dev/null
+        working-directory: otelcol
