@@ -5,6 +5,7 @@ help:
 	@awk -F':.*##' '/^[-_a-zA-Z0-9]+:.*##/{printf"%-12s\t%s\n",$$1,$$2}' $(MAKEFILE_LIST) | sort
 
 # https://github.com/open-telemetry/opentelemetry-collector/releases
+# https://github.com/open-telemetry/opentelemetry-collector-releases/releases
 OCB_VERSION=0.122.0
 
 .PHONY: download-ocb
