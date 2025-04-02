@@ -10,6 +10,9 @@ receivers:
       memory:
       network:
       paging:
+      process:
+      processes:
+      system:
 
 processors:
   attributes/copyfromexistingkey:
@@ -30,10 +33,6 @@ processors:
 exporters:
   otlp/mackerel:
     endpoint: otlp.mackerelio.com:4317
-    # endpoint: michizane.mackerel-staging.hatena.sh:4317
-    # endpoint: localhost:4318
-    # tls:
-    #   insecure: true
     compression: gzip
     headers:
       Mackerel-Api-Key: ${env:MACKEREL_APIKEY}
