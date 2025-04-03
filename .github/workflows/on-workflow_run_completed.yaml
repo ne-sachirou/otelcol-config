@@ -19,7 +19,7 @@ jobs:
           echo -n "${{github.event.workflow_run.path}}" | \
           node -e 'console.info("filename=" + /([^/]+)\.ya?ml$/.exec(require("fs").readFileSync(0, "utf-8"))[1])' >> "$GITHUB_OUTPUT"
         # yamllint enable rule:line-length
-      - uses: corentinmusard/otel-cicd-action@v2
+      - uses: corentinmusard/otel-cicd-action@32b29919dceea928e1c83dc69804973061a68825  # v2.2.3
         with:
           githubToken: ${{secrets.GITHUB_TOKEN}}
           otelServiceName: ${{steps.get-the-workflow-filename.outputs.filename}}
