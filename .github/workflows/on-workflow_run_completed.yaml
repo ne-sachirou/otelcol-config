@@ -10,7 +10,8 @@ name: on workflow_run completed
 
 jobs:
   otel-cicd-action:
-    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    runs-on: ubuntu-24.04
     steps:
       - name: get the workflow filename
         id: get-the-workflow-filename
