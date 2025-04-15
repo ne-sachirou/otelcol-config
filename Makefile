@@ -6,7 +6,7 @@ help:
 
 # https://github.com/open-telemetry/opentelemetry-collector/releases
 # https://github.com/open-telemetry/opentelemetry-collector-contrib/releases
-OCB_VERSION=0.123.0
+OCB_VERSION=0.124.0
 
 .PHONY: download-ocb
 download-ocb: ## Download OpenTelemetry Collector Builder
