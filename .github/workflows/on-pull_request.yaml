@@ -72,22 +72,11 @@ jobs:
       # yamllint enable rule:line-length
       - name: Generate otelcol code
         run: ./ocb --config builder-config.yaml --skip-compilation
-      - name: Check for changes in otelcol directory
-        id: check_changes
-        run: |
-          if git status --porcelain otelcol/ | grep .; then
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          fi
-      - name: Commit and push changes
-        if: steps.check_changes.outputs.changed == 'true'
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add otelcol/
-          git commit -m "Generate otelcol code"
-          git push
+      - name: Commit generated code
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403  # v5.2.0
+        with:
+          commit_message: Generate otelcol code
+          file_pattern: otelcol/*
 
   verify-otelcol-code:
     name: Check if the code of otelcol can be built
