@@ -15,11 +15,13 @@ jobs:
     steps:
       - name: get the workflow filename
         id: get-the-workflow-filename
-        # yamllint disable rule:line-length
-        run: |
-          echo -n "${{github.event.workflow_run.path}}" | \
-          node -e 'console.info("filename=" + /([^/]+)\.ya?ml$/.exec(require("fs").readFileSync(0, "utf-8"))[1])' >> "$GITHUB_OUTPUT"
-        # yamllint enable rule:line-length
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea  # v7.0.1
+        with:
+          script: |
+            const path = context.payload.workflow_run.path;
+            const match = path.match(/([^/]+)\.ya?ml$/);
+            if (!match) throw new Error("Invalid workflow filename");
+            core.setOutput("filename", match[1]);
       - uses: corentinmusard/otel-cicd-action@32b29919dceea928e1c83dc69804973061a68825  # v2.2.3
         with:
           githubToken: ${{secrets.GITHUB_TOKEN}}
