@@ -2,7 +2,7 @@
 name: on pull_request workflow_run completed
 
 "on":
-  workflow_run:
+  workflow_run:  # zizmor: ignore[dangerous-triggers]
     workflows:
       - on pull_request
     types:

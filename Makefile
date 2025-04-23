@@ -42,5 +42,7 @@ lint: lint-gha ## Lint the code
 	plutil -lint com.github.open-telemetry.opentelemetry-collector.plist
 
 lint-gha:
-	yamllint .github/workflows/*.yaml
+	yamllint .github/workflows/
 	actionlint
+	ghalint run
+	zizmor .
