@@ -1,27 +1,46 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  extends: ["config:recommended"],
-  ignorePaths: ["otelcol/**"],
-  labels: ["dependencies"],
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+  ],
+  ignorePaths: [
+    'otelcol/**',
+  ],
+  labels: [
+    'dependencies',
+  ],
   ocb: {
-    fileMatch: ["builder-config\\.ya?ml$"],
+    fileMatch: [
+      'builder-config\\.ya?ml$',
+    ],
   },
   packageRules: [
     {
       automerge: true,
-      matchUpdateTypes: ["minor", "patch"],
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
     },
     {
-      groupName: "ocb core",
-      matchManagers: ["ocb"],
-      matchPackagePrefixes: ["go.opentelemetry.io/collector/"],
+      groupName: 'ocb core',
+      matchManagers: [
+        'ocb',
+      ],
+      matchPackageNames: [
+        'go.opentelemetry.io/collector/{/,}**',
+      ],
     },
     {
-      groupName: "ocb contrib",
-      matchManagers: ["ocb"],
-      matchPackagePrefixes: ["github.com/open-telemetry/opentelemetry-collector-contrib/"],
+      groupName: 'ocb contrib',
+      matchManagers: [
+        'ocb',
+      ],
+      matchPackageNames: [
+        'github.com/open-telemetry/opentelemetry-collector-contrib/{/,}**',
+      ],
     },
   ],
-  schedule: "after 10am and before 7pm every weekday",
-  timezone: "Asia/Tokyo",
+  schedule: 'after 10am and before 7pm every weekday',
+  timezone: 'Asia/Tokyo',
 }
