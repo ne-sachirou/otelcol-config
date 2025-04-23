@@ -11,6 +11,16 @@
       automerge: true,
       matchUpdateTypes: ["minor", "patch"],
     },
+    {
+      groupName: "ocb core",
+      matchManagers: ["ocb"],
+      matchPackagePrefixes: ["go.opentelemetry.io/collector/"],
+    },
+    {
+      groupName: "ocb contrib",
+      matchManagers: ["ocb"],
+      matchPackagePrefixes: ["github.com/open-telemetry/opentelemetry-collector-contrib/"],
+    },
   ],
   schedule: "after 10am and before 7pm every weekday",
   timezone: "Asia/Tokyo",
