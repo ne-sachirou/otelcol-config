@@ -1,46 +1,39 @@
 {
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: [
-    'config:recommended',
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["config:recommended"],
+  customManagers: [
+    {
+      customType: "regex",
+      datasourceTemplate: "ocb",
+      fileMatch: ["Makefile"],
+      matchStrings: [
+        "(?<currentValue>\d+\.\d+\.\d+) +# (?<packageName>ocb) version"
+      ],
+    },
   ],
-  ignorePaths: [
-    'otelcol/**',
-  ],
-  labels: [
-    'dependencies',
-  ],
+  ignorePaths: ["otelcol/**"],
+  labels: ["dependencies"],
   ocb: {
-    fileMatch: [
-      'builder-config\\.ya?ml$',
-    ],
+    fileMatch: ["builder-config\\.ya?ml$"],
   },
   packageRules: [
     {
       automerge: true,
-      matchUpdateTypes: [
-        'minor',
-        'patch',
-      ],
+      matchUpdateTypes: ["minor", "patch"],
     },
     {
-      groupName: 'ocb core',
-      matchManagers: [
-        'ocb',
-      ],
-      matchPackageNames: [
-        'go.opentelemetry.io/collector/{/,}**',
-      ],
+      groupName: "ocb core",
+      matchManagers: ["ocb"],
+      matchPackageNames: ["go.opentelemetry.io/collector/{/,}**"],
     },
     {
-      groupName: 'ocb contrib',
-      matchManagers: [
-        'ocb',
-      ],
+      groupName: "ocb contrib",
+      matchManagers: ["ocb"],
       matchPackageNames: [
-        'github.com/open-telemetry/opentelemetry-collector-contrib/{/,}**',
+        "github.com/open-telemetry/opentelemetry-collector-contrib/{/,}**",
       ],
     },
   ],
-  schedule: 'after 10am and before 7pm every weekday',
-  timezone: 'Asia/Tokyo',
+  schedule: "after 10am and before 7pm every weekday",
+  timezone: "Asia/Tokyo",
 }
