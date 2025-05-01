@@ -7,7 +7,7 @@
       datasourceTemplate: "ocb",
       fileMatch: ["Makefile"],
       matchStrings: [
-        "(?<currentValue>\d+\.\d+\.\d+) +# (?<packageName>ocb) version"
+        "(?<currentValue>\d+\.\d+\.\d+) +# (?<packageName>ocb) version",
       ],
     },
   ],

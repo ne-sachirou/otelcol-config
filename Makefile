@@ -35,10 +35,8 @@ install-otelcol: otelcol/otelcol ## Install OpenTelemetry Collector
 	sudo launchctl load -w /Library/LaunchDaemons/com.github.open-telemetry.opentelemetry-collector.plist
 
 .PHOMY: lint
-lint: lint-gha ## Lint the code
+lint: lint-gha lint-otelcol ## Lint the code
 	shellcheck *.sh
-	yamllint *.yaml
-	otelcol/otelcol validate --config otelcol-config.yaml
 	plutil -lint com.github.open-telemetry.opentelemetry-collector.plist
 
 lint-gha:
@@ -46,3 +44,8 @@ lint-gha:
 	actionlint
 	ghalint run
 	zizmor .
+
+lint-otelcol:
+	yamllint builder-config.yaml otelcol-config.yaml
+	./ocb --config builder-config.yaml --skip-generate
+	otelcol/otelcol validate --config otelcol-config.yaml
