@@ -6,7 +6,7 @@ help:
 
 # https://github.com/open-telemetry/opentelemetry-collector/releases
 # https://github.com/open-telemetry/opentelemetry-collector-contrib/releases
-OCB_VERSION=0.125.0# ocb version
+OCB_VERSION=0.126.0# ocb version
 
 .PHONY: download-ocb
 download-ocb: ## Download OpenTelemetry Collector Builder
@@ -47,5 +47,4 @@ lint-gha:
 
 lint-otelcol:
 	yamllint builder-config.yaml otelcol-config.yaml
-	./ocb --config builder-config.yaml --skip-generate
 	otelcol/otelcol validate --config otelcol-config.yaml
