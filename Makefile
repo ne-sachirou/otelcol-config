@@ -47,5 +47,4 @@ lint-gha:
 
 lint-otelcol:
 	yamllint builder-config.yaml otelcol-config.yaml
-	./ocb --config builder-config.yaml --skip-generate
 	otelcol/otelcol validate --config otelcol-config.yaml
