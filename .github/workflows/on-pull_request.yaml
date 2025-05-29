@@ -80,7 +80,14 @@ jobs:
         with:
           commit_message: Generate otelcol code
           file_pattern: otelcol/*
-      - uses: ./.github/workflows/wf-validate-otelcol.yaml
+
+  validate-generated-code:
+    name: Validate generated otelcol code
+    needs: generate-otelcol
+    if: needs.generate-otelcol.result == 'success'
+    permissions:
+      contents: read
+    uses: ./.github/workflows/wf-validate-otelcol.yaml
 
   verify-otelcol-code:
     permissions:
