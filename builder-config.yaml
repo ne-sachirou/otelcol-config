@@ -1,4 +1,6 @@
 ---
+# https://github.com/open-telemetry/opentelemetry-collector/releases
+# https://github.com/open-telemetry/opentelemetry-collector-contrib/releases
 dist:
   name: otelcol
   description: OTel collector for ne-sachirou PC MacBook

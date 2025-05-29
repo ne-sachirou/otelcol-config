@@ -4,23 +4,13 @@ SHELL=/bin/bash
 help:
 	@awk -F':.*##' '/^[-_a-zA-Z0-9]+:.*##/{printf"%-12s\t%s\n",$$1,$$2}' $(MAKEFILE_LIST) | sort
 
-# https://github.com/open-telemetry/opentelemetry-collector/releases
-# https://github.com/open-telemetry/opentelemetry-collector-contrib/releases
-OCB_VERSION=0.127.0# ocb version
-
-.PHONY: download-ocb
-download-ocb: ## Download OpenTelemetry Collector Builder
-	curl --proto '=https' --tlsv1.2 -fL -o ocb "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/cmd%2Fbuilder%2Fv${OCB_VERSION}/ocb_${OCB_VERSION}_darwin_arm64"
-	chmod +x ocb
-
 .PHONY: build-otelcol
-build-otelcol: ocb ## Build OpenTelemetry Collector
-	(cd otelcol && go mod tidy)
-	./ocb --config builder-config.yaml --skip-generate
+build-otelcol: ## Build OpenTelemetry Collector
+	(cd otelcol && go build -o otelcol .)
 
 .PHONY: generate-otelcol-code
 generate-otelcol-code: ## Generate OpenTelemetry Collector code
-	./ocb --config builder-config.yaml --skip-compilation
+	go get ./... && go mod tidy && go generate ./...
 
 .PHONY: install-otelcol
 install-otelcol: otelcol/otelcol ## Install OpenTelemetry Collector
