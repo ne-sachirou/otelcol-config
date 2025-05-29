@@ -6,6 +6,17 @@
   ocb: {
     fileMatch: ["builder-config\\.ya?ml$"],
   },
+  customManagers: [
+    {
+      customType: "regex",
+      datasourceTemplate: "go",
+      fileMatch: ["^builder-config\\.ya?ml$"],
+      matchStrings: [
+        "- gomod: (?<depName>go\\.opentelemetry\\.io/collector/confmap/provider/\\w+) v?(?<currentValue>[0-9]+\\.[0-9]+\\.[0-9]+)",
+      ],
+      versioningTemplate: "semver",
+    },
+  ],
   packageRules: [
     {
       automerge: true,
@@ -13,11 +24,12 @@
     },
     {
       groupName: "ocb",
-      matchManagers: ["gomod", "ocb"],
+      matchManagers: ["gomod", "ocb", "regex"],
       matchPackageNames: [
         "github.com/open-telemetry/opentelemetry-collector-contrib/{/,}**",
-        "go.opentelemetry.io/collector/cmd/builder",
         "go.opentelemetry.io/collector/{/,}**",
+        "go.opentelemetry.io/collector/cmd/builder",
+        "go.opentelemetry.io/collector/confmap/provider/{/,}**",
       ],
     },
   ],
