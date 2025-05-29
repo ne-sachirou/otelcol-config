@@ -25,7 +25,7 @@ install-otelcol: otelcol/otelcol ## Install OpenTelemetry Collector
 	sudo launchctl load -w /Library/LaunchDaemons/com.github.open-telemetry.opentelemetry-collector.plist
 
 .PHOMY: lint
-lint: lint-gha lint-otelcol ## Lint the code
+lint: lint-gha lint-otelcol lint-renovate ## Lint the code
 	shellcheck *.sh
 	plutil -lint com.github.open-telemetry.opentelemetry-collector.plist
 
@@ -38,3 +38,6 @@ lint-gha:
 lint-otelcol:
 	yamllint builder-config.yaml otelcol-config.yaml
 	otelcol/otelcol validate --config otelcol-config.yaml
+
+lint-renovate:
+	npx --package renovate -- renovate-config-validator
