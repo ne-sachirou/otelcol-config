@@ -21,5 +21,5 @@ jobs:
       - name: Build otelcol
         run: go build -o otelcol .
         working-directory: otelcol
-      - name: Validate otelcol-config.yaml  # 検証ステップを追加
+      - name: Validate otelcol-config.yaml
         run: ./otelcol/otelcol validate --config otelcol-config.yaml
