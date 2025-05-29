@@ -24,7 +24,7 @@
     },
     {
       groupName: "ocb",
-      matchManagers: ["gomod", "ocb", "regex"],
+      matchManagers: ["gomod", "ocb", "custom.regex"],
       matchPackageNames: [
         "github.com/open-telemetry/opentelemetry-collector-contrib/{/,}**",
         "go.opentelemetry.io/collector/{/,}**",
