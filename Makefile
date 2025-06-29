@@ -41,3 +41,4 @@ lint-otelcol:
 
 lint-renovate:
 	npx --package renovate -- renovate-config-validator
+	yamllint .github/dependabot.yml
