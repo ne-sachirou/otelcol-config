@@ -2,15 +2,14 @@
 version: 2
 updates:
   - package-ecosystem: "gomod"
-    directory: "/"
+    directory: "/otelcol"
     ignore:
       - dependency-name: "*"
-        directories:
-          - "otelcol/"
-        update-types:
-          - "version-update:semver-major"
-          - "version-update:semver-minor"
-          - "version-update:semver-patch"
+    open-pull-requests-limit: 0
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/"
     open-pull-requests-limit: 0
     schedule:
       interval: "daily"
