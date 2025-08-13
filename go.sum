@@ -44,6 +44,7 @@ go.opentelemetry.io/collector/cmd/builder v0.129.0 h1:J6goyq+6Y48FVS6FjALMb1he9F
 go.opentelemetry.io/collector/cmd/builder v0.129.0/go.mod h1:pvF9G2Rp/GEoS1pASw8ZAzWZQxrUCRFXjUmnhglQ2Bs=
 go.opentelemetry.io/collector/cmd/builder v0.130.0/go.mod h1:1V51i5eJ72ORXb/H5+VuOFZi5Z8WyMSgsSQUIiN4Isk=
 go.opentelemetry.io/collector/cmd/builder v0.131.0/go.mod h1:oQ6jspQBxCZjATi51nE0/Q8wgVruNTh0FVkgpoM350Y=
+go.opentelemetry.io/collector/cmd/builder v0.132.0/go.mod h1:0XQ22UlmegZupqHIS1aofUgacmBRB0zCzPQhBpBi5Po=
 go.uber.org/goleak v1.3.0 h1:2K3zAYmnTNqV73imy9J1T3WC+gmCePx2hEGkimedGto=
 go.uber.org/goleak v1.3.0/go.mod h1:CoHD4mav9JJNrW/WLlf7HGZPjdw8EucARQHekz1X6bE=
 go.uber.org/multierr v1.11.0 h1:blXXJkSxSSfBVBlC76pxqeO+LN3aDfLQo+309xJstO0=
@@ -55,6 +56,7 @@ go.yaml.in/yaml/v3 v3.0.3/go.mod h1:tBHosrYAkRZjRAOREWbDnBXUf08JOwYq++0QNwQiWzI=
 golang.org/x/mod v0.25.0 h1:n7a+ZbQKQA/Ysbyb0/6IbB1H/X41mKgbhfv7AfG/44w=
 golang.org/x/mod v0.25.0/go.mod h1:IXM97Txy2VM4PJ3gI61r1YEk/gAj6zAHN3AdZt6S9Ww=
 golang.org/x/mod v0.26.0/go.mod h1:/j6NAhSk8iQ723BGAUyoAcn7SlD7s15Dp9Nd/SfeaFQ=
+golang.org/x/mod v0.27.0/go.mod h1:rWI627Fq0DEoudcK+MBkNkCe0EetEaDSwJJkCcjpazc=
 golang.org/x/sys v0.32.0 h1:s77OFDvIQeibCmezSnk/q6iAfkdiQaJi4VzroCFrN20=
 golang.org/x/sys v0.32.0/go.mod h1:BJP2sWEmIv4KK5OTEluFJCKSidICx8ciO85XgH3Ak8k=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
