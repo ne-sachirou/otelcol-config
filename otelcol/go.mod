@@ -4,8 +4,6 @@ module go.opentelemetry.io/collector/cmd/builder
 
 go 1.23.0
 
-toolchain go1.24.5
-
 require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/extension/healthcheckextension v0.132.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor v0.132.0
