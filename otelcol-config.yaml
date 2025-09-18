@@ -17,6 +17,12 @@ receivers:
         mute_process_user_error: true
       processes:
       system:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
 
 processors:
   attributes/mypc:
@@ -27,6 +33,14 @@ processors:
       - action: upsert
         key: service.name
         value: ne-sachirou-pc-macbook
+  attributes/trace:
+    actions:
+      - action: upsert
+        key: service.namespace
+        value: debug
+      - action: upsert
+        key: service.name
+        value: debug
   batch:
     timeout: 1m
   resourcedetection/system:
@@ -50,5 +64,13 @@ service:
         - attributes/mypc
         - batch
         - resourcedetection/system
+      exporters:
+        - otlp/mackerel
+    traces:
+      receivers:
+        - otlp
+      processors:
+        - attributes/trace
+        - batch
       exporters:
         - otlp/mackerel

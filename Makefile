@@ -45,4 +45,5 @@ lint-renovate:
 
 status: ## Show status of OpenTelemetry Collector service
 	sudo launchctl list | grep opentelemetry-collector
+	sudo lsof -iTCP:4317,4318
 	tail -f /var/log/otelcol/stdout.log
