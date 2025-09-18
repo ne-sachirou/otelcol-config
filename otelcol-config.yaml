@@ -11,11 +11,15 @@ receivers:
       network:
       paging:
       process:
+        mute_process_exe_error: true
+        mute_process_io_error: true
+        mute_process_name_error: true
+        mute_process_user_error: true
       processes:
       system:
 
 processors:
-  attributes/copyfromexistingkey:
+  attributes/mypc:
     actions:
       - action: upsert
         key: service.namespace
@@ -43,7 +47,7 @@ service:
       receivers:
         - hostmetrics
       processors:
-        - attributes/copyfromexistingkey
+        - attributes/mypc
         - batch
         - resourcedetection/system
       exporters:
