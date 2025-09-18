@@ -42,3 +42,7 @@ lint-otelcol:
 lint-renovate:
 	npx --package renovate -- renovate-config-validator
 	yamllint .github/dependabot.yml
+
+status: ## Show status of OpenTelemetry Collector service
+	sudo launchctl list | grep opentelemetry-collector
+	tail -f /var/log/otelcol/stdout.log
