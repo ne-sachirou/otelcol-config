@@ -1,15 +1,11 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  extends: [
-    ":configMigration",
-    "config:recommended",
-  ],
-
+  extends: [":configMigration", "config:recommended"],
   customManagers: [
     {
       customType: "regex",
       datasourceTemplate: "go",
-      fileMatch: ["^builder-config\\.ya?ml$"],
+      managerFilePatterns: ["/^builder-config\\.ya?ml$/"],
       matchStrings: [
         "- gomod: (?<depName>go\\.opentelemetry\\.io/collector/confmap/provider/\\w+) v?(?<currentValue>[0-9]+\\.[0-9]+\\.[0-9]+)",
       ],
@@ -20,7 +16,7 @@
   labels: ["dependencies"],
   minimumReleaseAge: "2 days",
   ocb: {
-    fileMatch: ["builder-config\\.ya?ml$"],
+    managerFilePatterns: ["/builder-config\\.ya?ml$/"],
   },
   packageRules: [
     {
