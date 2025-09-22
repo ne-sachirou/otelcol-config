@@ -1,43 +1,56 @@
 {
-  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
-    ":configMigration",
-    "config:recommended",
+    ':configMigration',
+    'config:recommended',
   ],
-
   customManagers: [
     {
-      customType: "regex",
-      datasourceTemplate: "go",
-      fileMatch: ["^builder-config\\.ya?ml$"],
-      matchStrings: [
-        "- gomod: (?<depName>go\\.opentelemetry\\.io/collector/confmap/provider/\\w+) v?(?<currentValue>[0-9]+\\.[0-9]+\\.[0-9]+)",
+      customType: 'regex',
+      datasourceTemplate: 'go',
+      managerFilePatterns: [
+        '/^builder-config\\.ya?ml$/',
       ],
-      versioningTemplate: "semver",
+      matchStrings: [
+        '- gomod: (?<depName>go\\.opentelemetry\\.io/collector/confmap/provider/\\w+) v?(?<currentValue>[0-9]+\\.[0-9]+\\.[0-9]+)',
+      ],
+      versioningTemplate: 'semver',
     },
   ],
-  ignorePaths: ["otelcol/**"],
-  labels: ["dependencies"],
-  minimumReleaseAge: "2 days",
+  ignorePaths: [
+    'otelcol/**',
+  ],
+  labels: [
+    'dependencies',
+  ],
+  minimumReleaseAge: '2 days',
   ocb: {
-    fileMatch: ["builder-config\\.ya?ml$"],
+    managerFilePatterns: [
+      '/builder-config\\.ya?ml$/',
+    ],
   },
   packageRules: [
     {
       automerge: true,
-      matchUpdateTypes: ["patch"],
+      matchUpdateTypes: [
+        'patch',
+      ],
     },
     {
-      groupName: "ocb",
-      matchManagers: ["gomod", "ocb", "custom.regex"],
+      groupName: 'ocb',
+      matchManagers: [
+        'gomod',
+        'ocb',
+        'custom.regex',
+      ],
       matchPackageNames: [
-        "github.com/open-telemetry/opentelemetry-collector-contrib/{/,}**",
-        "go.opentelemetry.io/collector/{/,}**",
-        "go.opentelemetry.io/collector/cmd/builder",
-        "go.opentelemetry.io/collector/confmap/provider/{/,}**",
+        'github.com/open-telemetry/opentelemetry-collector-contrib/{/,}**',
+        'go.opentelemetry.io/collector/{/,}**',
+        'go.opentelemetry.io/collector/cmd/builder',
+        'go.opentelemetry.io/collector/confmap/provider/{/,}**',
       ],
     },
   ],
-  schedule: "after 10am and before 7pm every weekday",
-  timezone: "Asia/Tokyo",
+  schedule: 'after 10am and before 7pm every weekday',
+  timezone: 'Asia/Tokyo',
 }
