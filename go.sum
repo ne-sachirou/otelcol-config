@@ -43,6 +43,7 @@ github.com/stretchr/testify v1.10.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf
 go.opentelemetry.io/collector/cmd/builder v0.135.0 h1:xx0yqx/xudnyHWTFZq5RWep5wn1uEVqYU5F293ljlZo=
 go.opentelemetry.io/collector/cmd/builder v0.135.0/go.mod h1:sNUkxDUaQQwMmVTndHPZYdEfQp3bl1iFY6TSyDWFozc=
 go.opentelemetry.io/collector/cmd/builder v0.136.0/go.mod h1:TW1AZWtQD+UlTOhNq9EPUDkIQbEYrXyp9WV1oJM2SuY=
+go.opentelemetry.io/collector/cmd/builder v0.137.0/go.mod h1:TW1AZWtQD+UlTOhNq9EPUDkIQbEYrXyp9WV1oJM2SuY=
 go.uber.org/goleak v1.3.0 h1:2K3zAYmnTNqV73imy9J1T3WC+gmCePx2hEGkimedGto=
 go.uber.org/goleak v1.3.0/go.mod h1:CoHD4mav9JJNrW/WLlf7HGZPjdw8EucARQHekz1X6bE=
 go.uber.org/multierr v1.11.0 h1:blXXJkSxSSfBVBlC76pxqeO+LN3aDfLQo+309xJstO0=
