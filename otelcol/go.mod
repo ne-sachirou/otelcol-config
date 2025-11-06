@@ -4,9 +4,8 @@ module go.opentelemetry.io/collector/cmd/builder
 
 go 1.24.0
 
-toolchain go1.24.7
-
 require (
+	github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.2.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/extension/healthcheckextension v0.138.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor v0.138.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.138.0
@@ -19,8 +18,6 @@ require (
 	go.opentelemetry.io/collector/connector v0.138.0
 	go.opentelemetry.io/collector/exporter v1.44.0
 	go.opentelemetry.io/collector/exporter/debugexporter v0.138.0
-	go.opentelemetry.io/collector/exporter/otlpexporter v0.138.0
-	go.opentelemetry.io/collector/exporter/otlphttpexporter v0.138.0
 	go.opentelemetry.io/collector/extension v1.44.0
 	go.opentelemetry.io/collector/otelcol v0.138.0
 	go.opentelemetry.io/collector/processor v1.44.0
@@ -197,6 +194,8 @@ require (
 	go.opentelemetry.io/collector/exporter/exporterhelper v0.138.0 // indirect
 	go.opentelemetry.io/collector/exporter/exporterhelper/xexporterhelper v0.138.0 // indirect
 	go.opentelemetry.io/collector/exporter/exportertest v0.138.0 // indirect
+	go.opentelemetry.io/collector/exporter/otlpexporter v0.138.0 // indirect
+	go.opentelemetry.io/collector/exporter/otlphttpexporter v0.138.0 // indirect
 	go.opentelemetry.io/collector/exporter/xexporter v0.138.0 // indirect
 	go.opentelemetry.io/collector/extension/extensionauth v1.44.0 // indirect
 	go.opentelemetry.io/collector/extension/extensioncapabilities v0.138.0 // indirect
