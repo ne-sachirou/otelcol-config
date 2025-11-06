@@ -8,13 +8,19 @@ updates:
     open-pull-requests-limit: 0
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
   - package-ecosystem: "gomod"
     directory: "/"
     open-pull-requests-limit: 0
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
   - package-ecosystem: "github-actions"
     directory: "/"
     open-pull-requests-limit: 0
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
