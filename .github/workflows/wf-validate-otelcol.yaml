@@ -23,3 +23,5 @@ jobs:
         working-directory: otelcol
       - name: Validate otelcol-config.yaml
         run: ./otelcol/otelcol validate --config otelcol-config.yaml
+        env:
+          MACKEREL_APIKEY: dummy
