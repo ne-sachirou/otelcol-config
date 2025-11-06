@@ -49,16 +49,7 @@ processors:
       hostname_sources: ["os"]
 
 exporters:
-  otlp/mackerel:
-    endpoint: otlp.mackerelio.com:4317
-    compression: gzip
-    headers:
-      Mackerel-Api-Key: ${env:MACKEREL_APIKEY}
-  otlphttp/mackerel-trace:
-    endpoint: https://otlp-vaxila.mackerelio.com
-    headers:
-      Mackerel-Api-Key: ${env:MACKEREL_APIKEY}
-      Accept: "*/*"
+  mackerelotlp:
 
 service:
   pipelines:
@@ -70,7 +61,7 @@ service:
         - batch
         - resourcedetection/system
       exporters:
-        - otlp/mackerel
+        - mackerelotlp
     traces:
       receivers:
         - otlp
@@ -78,4 +69,4 @@ service:
         - attributes/trace
         - batch
       exporters:
-        - otlphttp/mackerel-trace
+        - mackerelotlp
