@@ -54,19 +54,10 @@ exporters:
 service:
   pipelines:
     metrics:
-      receivers:
-        - hostmetrics
-      processors:
-        - attributes/mypc
-        - batch
-        - resourcedetection/system
-      exporters:
-        - mackerelotlp
+      receivers: [hostmetrics]
+      processors: [attributes/mypc, batch, resourcedetection/system]
+      exporters: [mackerelotlp]
     traces:
-      receivers:
-        - otlp
-      processors:
-        - attributes/trace
-        - batch
-      exporters:
-        - mackerelotlp
+      receivers: [otlp]
+      processors: [attributes/trace, batch]
+      exporters: [mackerelotlp]
