@@ -11,8 +11,8 @@ import (
 	"go.opentelemetry.io/collector/processor"
 	"go.opentelemetry.io/collector/receiver"
 	"go.opentelemetry.io/collector/service/telemetry/otelconftelemetry"
-	debugexporter "go.opentelemetry.io/collector/exporter/debugexporter"
 	mackerelotlpexporter "github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter"
+	debugexporter "go.opentelemetry.io/collector/exporter/debugexporter"
 	healthcheckextension "github.com/open-telemetry/opentelemetry-collector-contrib/extension/healthcheckextension"
 	attributesprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor"
 	resourcedetectionprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor"
@@ -48,15 +48,15 @@ func components() (otelcol.Factories, error) {
 	factories.ReceiverModules[otlpreceiver.NewFactory().Type()] = "go.opentelemetry.io/collector/receiver/otlpreceiver v0.140.0"
 
 	factories.Exporters, err = otelcol.MakeFactoryMap[exporter.Factory](
-		debugexporter.NewFactory(),
 		mackerelotlpexporter.NewFactory(),
+		debugexporter.NewFactory(),
 	)
 	if err != nil {
 		return otelcol.Factories{}, err
 	}
 	factories.ExporterModules = make(map[component.Type]string, len(factories.Exporters))
+	factories.ExporterModules[mackerelotlpexporter.NewFactory().Type()] = "github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.3.0"
 	factories.ExporterModules[debugexporter.NewFactory().Type()] = "go.opentelemetry.io/collector/exporter/debugexporter v0.140.0"
-	factories.ExporterModules[mackerelotlpexporter.NewFactory().Type()] = "github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.2.0"
 
 	factories.Processors, err = otelcol.MakeFactoryMap[processor.Factory](
 		attributesprocessor.NewFactory(),

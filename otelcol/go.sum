@@ -285,8 +285,8 @@ github.com/linode/go-metadata v0.2.2 h1:UbgM0tC5lnIpF1GrWieuZLs47t+Tnt8js1QScLO7
 github.com/linode/go-metadata v0.2.2/go.mod h1:yJUJMW1qfji7pzKdzhpBcYyxqcFRrUUKDxBOSVv2OhE=
 github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0 h1:6E+4a0GO5zZEnZ81pIr0yLvtUWk2if982qA3F3QD6H4=
 github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0/go.mod h1:zJYVVT2jmtg6P3p1VtQj7WsuWi/y4VnjVBn7F8KPB3I=
-github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.2.0 h1:yfKOf93cG4nJNfUCsJVQzb38J7G1+/LP41Kpo9ciuGg=
-github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.2.0/go.mod h1:p4IxR7zC/1zwKTRzI8xc+Ix7PqmAf/cLeYmapilfUDk=
+github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.3.0 h1:AMSsxPBW8LHBF1xtR2M2IHnXGgK8qzgB5GXJ4LBw+3U=
+github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.3.0/go.mod h1:pLUcbsM5JJJGKylZaEjw62+C71Ss8tMp3FruUKqrtnI=
 github.com/magefile/mage v1.15.0 h1:BvGheCMAsG3bWUDbZ8AyXXpCNwU9u5CB6sM+HNb9HYg=
 github.com/magefile/mage v1.15.0/go.mod h1:z5UZb/iS3GoOSn0JgWuiw7dxlurVYTu+/jHXqQg881A=
 github.com/magiconair/properties v1.8.10 h1:s31yESBquKXCV9a/ScB3ESkOjUYYv+X0rg8SYxI99mE=
@@ -565,10 +565,10 @@ go.opentelemetry.io/collector/exporter/exporterhelper/xexporterhelper v0.140.0 h
 go.opentelemetry.io/collector/exporter/exporterhelper/xexporterhelper v0.140.0/go.mod h1:La5T7cyiinV4qxjD/l2MI2FDL30ArKaBp6Lji+RBzm8=
 go.opentelemetry.io/collector/exporter/exportertest v0.140.0 h1:WdRm8xXdjMcNnsVQHHTbGxmsp+4MuNMKhS0dR++bKOY=
 go.opentelemetry.io/collector/exporter/exportertest v0.140.0/go.mod h1:Bc3/wxba7fjtgjqrj8Axp73TCQ5W5reFb+96LTALWa4=
-go.opentelemetry.io/collector/exporter/otlpexporter v0.138.0 h1:g4Q1WX57cOwtGviPM9rsjIiYTsi3GxGgL3P4HeUN9I0=
-go.opentelemetry.io/collector/exporter/otlpexporter v0.138.0/go.mod h1:5SCy2nm8VpWhPsWqKEzFc9PdOXMcL+7BQYhDoqZ9U74=
-go.opentelemetry.io/collector/exporter/otlphttpexporter v0.138.0 h1:qkZN1ASMlQVV87rkIjngBXoG9khaqXfynxotkLqqu6Q=
-go.opentelemetry.io/collector/exporter/otlphttpexporter v0.138.0/go.mod h1:BUMGEMWulAHfhqFGOb3nrwCWWPXD07CY8vr+drJb47Y=
+go.opentelemetry.io/collector/exporter/otlpexporter v0.139.0 h1:opYPLkYQ2o5C7ChtRVdjUsYMxuNEccl7e5wfv7Y4LUM=
+go.opentelemetry.io/collector/exporter/otlpexporter v0.139.0/go.mod h1:XOwIss1oBTaWmCVIEqLJxb+k1dNl1pfvwOhle3jY7PQ=
+go.opentelemetry.io/collector/exporter/otlphttpexporter v0.139.0 h1:B6R1DUAnS+JShBogkjYrwg2hnjrNgzDkCoV68LnZzNI=
+go.opentelemetry.io/collector/exporter/otlphttpexporter v0.139.0/go.mod h1:DLPIj2hQhDaPrVXs77s3il8zkq80kZ19DqM3Z5M7g6M=
 go.opentelemetry.io/collector/exporter/xexporter v0.140.0 h1:snh7CMQy8QDCZMVQG2e3nDrsR5yEwbFc+zIbaFPc7aA=
 go.opentelemetry.io/collector/exporter/xexporter v0.140.0/go.mod h1:KIn0RaW66ifb6tXKz5XU+icFBVpn2QDH5QqaKdZDEJA=
 go.opentelemetry.io/collector/extension v1.46.0 h1:+ATT9ADkMUR0cRH8J53vU9MRJ9UspRC0B+BqDGW1aRE=
