@@ -50,9 +50,18 @@ exporters:
   mackerelotlp:
 
 service:
+  telemetry:
+    metrics:
+      level: detailed
+      readers:
+        - periodic:
+            exporter:
+              otlp:
+                protocol: http/protobuf
+                endpoint: http://127.0.0.1:4318/v1/metrics
   pipelines:
     metrics:
-      receivers: [hostmetrics]
+      receivers: [hostmetrics, otlp]
       processors: [attributes/mypc, resourcedetection/system]
       exporters: [mackerelotlp]
     traces:
