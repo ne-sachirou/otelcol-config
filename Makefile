@@ -37,7 +37,7 @@ lint-gha:
 
 lint-otelcol:
 	yamllint builder-config.yaml otelcol-config.yaml
-	otelcol/otelcol validate --config otelcol-config.yaml
+	MACKEREL_APIKEY='dummy' otelcol/otelcol validate --config otelcol-config.yaml
 
 lint-renovate:
 	npx --package renovate@latest -- renovate-config-validator
