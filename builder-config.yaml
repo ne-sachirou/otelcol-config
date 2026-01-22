@@ -7,12 +7,12 @@ dist:
   output_path: ./otelcol
 
 receivers:
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver v0.143.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver v0.144.0
   - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.144.0
 
 processors:
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor v0.143.0
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.143.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor v0.144.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.144.0
   - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.144.0
 
 exporters:
@@ -20,7 +20,7 @@ exporters:
   - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.144.0
 
 extensions:
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/healthcheckextension v0.143.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/healthcheckextension v0.144.0
 
 providers:
   - gomod: go.opentelemetry.io/collector/confmap/provider/envprovider v1.50.0
