@@ -48,6 +48,8 @@ processors:
 
 exporters:
   mackerelotlp:
+  debug:
+    verbosity: detailed
 
 service:
   telemetry:
@@ -67,4 +69,4 @@ service:
     traces:
       receivers: [otlp]
       processors: [attributes/trace]
-      exporters: [mackerelotlp]
+      exporters: [debug]
