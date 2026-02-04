@@ -32,8 +32,8 @@ lint: lint-gha lint-otelcol lint-renovate ## Lint the code
 lint-gha:
 	yamllint .github/workflows/
 	actionlint
-	ghalint run
 	zizmor .
+	ghalint run
 
 lint-otelcol:
 	yamllint builder-config.yaml otelcol-config.yaml

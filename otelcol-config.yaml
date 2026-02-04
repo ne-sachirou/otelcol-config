@@ -47,7 +47,7 @@ processors:
       hostname_sources: ["os"]
 
 exporters:
-  mackerelotlp:
+  mackerel_otlp:
   debug:
     verbosity: detailed
 
@@ -65,7 +65,7 @@ service:
     metrics:
       receivers: [hostmetrics, otlp]
       processors: [attributes/mypc, resourcedetection/system]
-      exporters: [mackerelotlp]
+      exporters: [mackerel_otlp]
     traces:
       receivers: [otlp]
       processors: [attributes/trace]
