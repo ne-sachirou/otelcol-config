@@ -2,7 +2,7 @@
 name: on pull_request workflow_run completed
 
 "on":
-  workflow_run:  # zizmor: ignore[dangerous-triggers]
+  workflow_run: # zizmor: ignore[dangerous-triggers]
     workflows:
       - on pull_request
     types:
@@ -20,14 +20,14 @@ jobs:
     steps:
       - name: get the workflow filename
         id: get-the-workflow-filename
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd  # v8.0.0
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         with:
           script: |
             const path = context.payload.workflow_run.path;
             const match = path.match(/([^/]+)\.ya?ml$/);
             if (!match) throw new Error("Invalid workflow filename");
             core.setOutput("filename", match[1]);
-      - uses: corentinmusard/otel-cicd-action@7e307f7baefcf4929d94d2844bc72d87566a75c3  # v3.0.0
+      - uses: corentinmusard/otel-cicd-action@7e307f7baefcf4929d94d2844bc72d87566a75c3 # v3.0.0
         with:
           githubToken: ${{secrets.GITHUB_TOKEN}}
           otelServiceName: ${{steps.get-the-workflow-filename.outputs.filename}}

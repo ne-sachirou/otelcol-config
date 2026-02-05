@@ -30,6 +30,7 @@ lint: lint-gha lint-otelcol lint-renovate ## Lint the code
 	plutil -lint com.github.open-telemetry.opentelemetry-collector.plist
 
 lint-gha:
+	npx prettier -c .github/workflows/*.yaml
 	yamllint .github/workflows/
 	actionlint
 	zizmor .
