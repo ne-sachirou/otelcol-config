@@ -5,15 +5,15 @@ help:
 	@awk -F':.*##' '/^[-_a-zA-Z0-9]+:.*##/{printf"%-12s\t%s\n",$$1,$$2}' $(MAKEFILE_LIST) | sort
 
 .PHONY: build-otelcol
-build-otelcol: ## Build OpenTelemetry Collector
+build-otelcol: ## OpenTelemetry Collectorをbuildする
 	(cd otelcol && go build -o otelcol .)
 
 .PHONY: generate-otelcol-code
-generate-otelcol-code: ## Generate OpenTelemetry Collector code
+generate-otelcol-code: ## OpenTelemetry Collectorのcodeを生成する
 	go get ./... && go mod tidy && go generate ./...
 
 .PHONY: install-otelcol
-install-otelcol: otelcol/otelcol ## Install OpenTelemetry Collector
+install-otelcol: otelcol/otelcol ## build濟みのOpenTelemetry Collectorをinstallする
 	sudo cp otelcol/otelcol /usr/local/bin/otelcol
 	sudo cp otelcol-config.yaml /usr/local/etc/otelcol-config.yaml
 	sudo mkdir -p /var/log/otelcol
@@ -25,7 +25,7 @@ install-otelcol: otelcol/otelcol ## Install OpenTelemetry Collector
 	sudo launchctl load -w /Library/LaunchDaemons/com.github.open-telemetry.opentelemetry-collector.plist
 
 .PHOMY: lint
-lint: lint-gha lint-otelcol lint-renovate ## Lint the code
+lint: lint-gha lint-otelcol lint-renovate ## codeをlintする
 	shellcheck *.sh
 	plutil -lint com.github.open-telemetry.opentelemetry-collector.plist
 
@@ -44,7 +44,7 @@ lint-renovate:
 	npx --package renovate@latest -- renovate-config-validator
 	yamllint .github/dependabot.yml
 
-status: ## Show status of OpenTelemetry Collector service
+status: ## OpenTelemetry Collector serviceの稼働狀態を見る
 	sudo launchctl list | grep opentelemetry-collector
 	sudo lsof -iTCP:4317,4318 || true
 	tail -f /var/log/otelcol/stdout.log
