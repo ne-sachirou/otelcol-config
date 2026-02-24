@@ -16,12 +16,17 @@ generate-otelcol-code: ## OpenTelemetry Collectorのcodeを生成する
 install-otelcol: otelcol/otelcol ## build濟みのOpenTelemetry Collectorをinstallする
 	sudo cp otelcol/otelcol /usr/local/bin/otelcol
 	sudo cp otelcol-config.yaml /usr/local/etc/otelcol-config.yaml
+	sudo cp otelcol.sh /usr/local/bin/otelcol.sh
+	sudo chmod 755 /usr/local/bin/otelcol.sh
+	sudo chown root:wheel /usr/local/bin/otelcol.sh
+
 	sudo mkdir -p /var/log/otelcol
+	sudo cp newsyslog.conf /etc/newsyslog.d/otelcol.conf
+
 	./com.github.open-telemetry.opentelemetry-collector.plist.sh
 	sudo cp com.github.open-telemetry.opentelemetry-collector.plist /Library/LaunchDaemons/
 	sudo chmod 644 /Library/LaunchDaemons/com.github.open-telemetry.opentelemetry-collector.plist
 	sudo chown root:wheel /Library/LaunchDaemons/com.github.open-telemetry.opentelemetry-collector.plist
-	sudo cp newsyslog.conf /etc/newsyslog.d/otelcol.conf
 	sudo launchctl unload /Library/LaunchDaemons/com.github.open-telemetry.opentelemetry-collector.plist
 	sudo launchctl load -w /Library/LaunchDaemons/com.github.open-telemetry.opentelemetry-collector.plist
 

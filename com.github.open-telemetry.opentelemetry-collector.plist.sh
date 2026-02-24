@@ -11,9 +11,7 @@ PLIST=$(cat <<PLIST
 
     <key>ProgramArguments</key>
     <array>
-      <string>/usr/local/bin/otelcol</string>
-      <string>--config</string>
-      <string>/usr/local/etc/otelcol-config.yaml</string>
+      <string>/usr/local/bin/otelcol.sh</string>
     </array>
     <key>EnvironmentVariables</key>
     <dict>
