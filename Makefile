@@ -21,6 +21,7 @@ install-otelcol: otelcol/otelcol ## build濟みのOpenTelemetry Collectorをinst
 	sudo cp com.github.open-telemetry.opentelemetry-collector.plist /Library/LaunchDaemons/
 	sudo chmod 644 /Library/LaunchDaemons/com.github.open-telemetry.opentelemetry-collector.plist
 	sudo chown root:wheel /Library/LaunchDaemons/com.github.open-telemetry.opentelemetry-collector.plist
+	sudo cp newsyslog.conf /etc/newsyslog.d/otelcol.conf
 	sudo launchctl unload /Library/LaunchDaemons/com.github.open-telemetry.opentelemetry-collector.plist
 	sudo launchctl load -w /Library/LaunchDaemons/com.github.open-telemetry.opentelemetry-collector.plist
 
