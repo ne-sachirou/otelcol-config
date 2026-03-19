@@ -72,11 +72,11 @@ service:
       receivers: [hostmetrics, otlp]
       processors: [attributes/mypc, resourcedetection/system]
       exporters: [mackerel_otlp]
-    metrics/c4se:
-      receivers: [otlp/c4se]
-      processors: []
-      exporters: [mackerel_otlp/c4se]
     traces:
       receivers: [otlp]
       processors: [attributes/trace]
       exporters: [debug]
+    metrics/c4se:
+      receivers: [otlp/c4se]
+      processors: []
+      exporters: [mackerel_otlp/c4se]

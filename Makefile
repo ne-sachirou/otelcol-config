@@ -54,5 +54,5 @@ lint-renovate:
 
 status: ## OpenTelemetry Collector serviceの稼働狀態を見る
 	sudo launchctl list | grep opentelemetry-collector
-	sudo lsof -iTCP:4317,4318 || true
+	sudo lsof -iTCP:4317,4318,4319 || true
 	tail -f /var/log/otelcol/stdout.log
