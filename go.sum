@@ -19,6 +19,7 @@ github.com/knadh/koanf/providers/fs v1.0.0 h1:tvn4MrduLgdOSUqqEHULUuIcELXf6xDOpH
 github.com/knadh/koanf/providers/fs v1.0.0/go.mod h1:FksHET+xXFNDozvj8ZCdom54OnZ6eGKJtC5FhZJKx/8=
 github.com/knadh/koanf/v2 v2.3.2 h1:Ee6tuzQYFwcZXQpc2MiVeC6qHMandf5SMUJJNoFp/c4=
 github.com/knadh/koanf/v2 v2.3.2/go.mod h1:gRb40VRAbd4iJMYYD5IxZ6hfuopFcXBpc9bbQpZwo28=
+github.com/knadh/koanf/v2 v2.3.3/go.mod h1:gRb40VRAbd4iJMYYD5IxZ6hfuopFcXBpc9bbQpZwo28=
 github.com/kr/pretty v0.3.1 h1:flRD4NNwYAUpkphVc1HcthR4KEIFJ65n8Mw5qdRn3LE=
 github.com/kr/pretty v0.3.1/go.mod h1:hoEshYVHaxMs3cyo3Yncou5ZscifuDolrwPKZanG3xk=
 github.com/kr/text v0.2.0 h1:5Nx0Ya0ZqY2ygV366QzturHI13Jq95ApcVaJBhpS+AY=
@@ -42,6 +43,7 @@ github.com/stretchr/testify v1.11.1/go.mod h1:wZwfW3scLgRK+23gO65QZefKpKQRnfz6sD
 go.opentelemetry.io/collector/cmd/builder v0.146.1 h1:IvSyI+6UIViw0z5qTHPRHrEzQhuqtrk/EjDbSrrwsGM=
 go.opentelemetry.io/collector/cmd/builder v0.146.1/go.mod h1:gPTqFF5uAF3OnrFjwRN4JwROK0Rg+LjIc1Fh0C+ci/4=
 go.opentelemetry.io/collector/cmd/builder v0.147.0/go.mod h1:oP+JvKxz7BWGPQUPa/AmoIamZvk6kQtz8XHBJVuy3h4=
+go.opentelemetry.io/collector/cmd/builder v0.148.0/go.mod h1:pFwU1tJbcpfD+K37IsTboMQ5jsgPBj8nhtkXpO+1WLE=
 go.uber.org/goleak v1.3.0 h1:2K3zAYmnTNqV73imy9J1T3WC+gmCePx2hEGkimedGto=
 go.uber.org/goleak v1.3.0/go.mod h1:CoHD4mav9JJNrW/WLlf7HGZPjdw8EucARQHekz1X6bE=
 go.uber.org/multierr v1.11.0 h1:blXXJkSxSSfBVBlC76pxqeO+LN3aDfLQo+309xJstO0=
