@@ -27,7 +27,7 @@ jobs:
             const match = path.match(/([^/]+)\.ya?ml$/);
             if (!match) throw new Error("Invalid workflow filename");
             core.setOutput("filename", match[1]);
-      - uses: corentinmusard/otel-cicd-action@0f9f16fceb53fd8c996042e28c642ec61f844876 # v4.0.0
+      - uses: corentinmusard/otel-cicd-action@f2d88ecf54d9dd3e01ea95e25f93603212ee93d3 # v4.0.1
         with:
           githubToken: ${{secrets.GITHUB_TOKEN}}
           otelServiceName: ${{steps.get-the-workflow-filename.outputs.filename}}
