@@ -297,8 +297,8 @@ github.com/linode/go-metadata v0.2.4 h1:iif+14PN5T0u/wRnu6i/UlLQrlaFlWvDJzm0Wl9R
 github.com/linode/go-metadata v0.2.4/go.mod h1:h6yHiRupdKvyPkydU9g8kUA3QKdAgj3WX2wrF+mUv1c=
 github.com/lufia/plan9stats v0.0.0-20251013123823-9fd1530e3ec3 h1:PwQumkgq4/acIiZhtifTV5OUqqiP82UAl0h87xj/l9k=
 github.com/lufia/plan9stats v0.0.0-20251013123823-9fd1530e3ec3/go.mod h1:autxFIvghDt3jPTLoqZ9OZ7s9qTGNAWmYCjVFWPX/zg=
-github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.12.0 h1:Y1Z58DujD1DHjlCZkoaAABVPO4CQY2lVF427mGA4dMs=
-github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.12.0/go.mod h1:tjwq8538erTTUY3c7XGtJWaG6iw7do3Soe5v8JNenTY=
+github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.13.0 h1:Rk3P0A48AOsfW9uX8A8G9PpYNb11c6ezUUG4PkgEfCU=
+github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.13.0/go.mod h1:urYc5BnUlpkAgYg4DK+bjs3g03u8n85ZLo3Y5QyEK9c=
 github.com/magefile/mage v1.15.0 h1:BvGheCMAsG3bWUDbZ8AyXXpCNwU9u5CB6sM+HNb9HYg=
 github.com/magefile/mage v1.15.0/go.mod h1:z5UZb/iS3GoOSn0JgWuiw7dxlurVYTu+/jHXqQg881A=
 github.com/magiconair/properties v1.8.10 h1:s31yESBquKXCV9a/ScB3ESkOjUYYv+X0rg8SYxI99mE=
@@ -584,10 +584,10 @@ go.opentelemetry.io/collector/exporter/exporterhelper/xexporterhelper v0.148.0 h
 go.opentelemetry.io/collector/exporter/exporterhelper/xexporterhelper v0.148.0/go.mod h1:bc03Yf1kCAG4LwkztlOR9NXKBZ6dMfnJLV6SL77zAzQ=
 go.opentelemetry.io/collector/exporter/exportertest v0.148.0 h1:joLVWwfWDk7idnikGPeOWOa7nJG1pG1+jGvuuOOB1/E=
 go.opentelemetry.io/collector/exporter/exportertest v0.148.0/go.mod h1:R202E9bjYU4R+2jiDt+aiZSwsIZI3slL6M8y1MeuqkM=
-go.opentelemetry.io/collector/exporter/otlpexporter v0.147.0 h1:3U2POf8dNTSkHfRJUZ2XDZCQz+4RxnNL4Rb0JpXAju0=
-go.opentelemetry.io/collector/exporter/otlpexporter v0.147.0/go.mod h1:cN2V5U7DrSj3hkriZxJ+p49L9A2BNX4MZ2hI964Fa8k=
-go.opentelemetry.io/collector/exporter/otlphttpexporter v0.147.0 h1:9LoyZOJD/zmcR5yVfFBNXm9Vfl4Gtlcoc7Ivv72F9FQ=
-go.opentelemetry.io/collector/exporter/otlphttpexporter v0.147.0/go.mod h1:V2qiWk2gCWYx+Gb7mwrb+U4Oc/Fp4lksJKQ6jd4rZ8w=
+go.opentelemetry.io/collector/exporter/otlpexporter v0.148.0 h1:oBcYpuuRdK0gZNXO/zCQViSZTn/JH/Z9j/tuqpmd+q4=
+go.opentelemetry.io/collector/exporter/otlpexporter v0.148.0/go.mod h1:Eavhwd/38JzeDeiDRsO8WFY2+FPmw0pSJt8k1tMz2d0=
+go.opentelemetry.io/collector/exporter/otlphttpexporter v0.148.0 h1:hFUKoEOzOS0yJpLX9ucLjl0paXqFRArhbplHTVEb7y8=
+go.opentelemetry.io/collector/exporter/otlphttpexporter v0.148.0/go.mod h1:YY2DVennR8C1uPeldeuPNLj8rUcabF2Pb+SDOpKvFwA=
 go.opentelemetry.io/collector/exporter/xexporter v0.148.0 h1:QKMwwrUe4snzB9B97NaBtf9qFEeIjx4/oBSwv8EZbJc=
 go.opentelemetry.io/collector/exporter/xexporter v0.148.0/go.mod h1:rZ60Z9Ny4H+IX5dsn+RiJEJQRNEXAEYZ6XFwE2EWxGU=
 go.opentelemetry.io/collector/extension v1.54.0 h1:nF+pPfXWcWXjauX0+E1gsWUlUdAe2+26VKIb9hKZJAk=
@@ -887,8 +887,8 @@ google.golang.org/genproto/googleapis/api v0.0.0-20260226221140-a57be14db171 h1:
 google.golang.org/genproto/googleapis/api v0.0.0-20260226221140-a57be14db171/go.mod h1:M5krXqk4GhBKvB596udGL3UyjL4I1+cTbK0orROM9ng=
 google.golang.org/genproto/googleapis/rpc v0.0.0-20260226221140-a57be14db171 h1:ggcbiqK8WWh6l1dnltU4BgWGIGo+EVYxCaAPih/zQXQ=
 google.golang.org/genproto/googleapis/rpc v0.0.0-20260226221140-a57be14db171/go.mod h1:4Hqkh8ycfw05ld/3BWL7rJOSfebL2Q+DVDeRgYgxUU8=
-google.golang.org/grpc v1.79.2 h1:fRMD94s2tITpyJGtBBn7MkMseNpOZU8ZxgC3MMBaXRU=
-google.golang.org/grpc v1.79.2/go.mod h1:KmT0Kjez+0dde/v2j9vzwoAScgEPx/Bw1CYChhHLrHQ=
+google.golang.org/grpc v1.79.3 h1:sybAEdRIEtvcD68Gx7dmnwjZKlyfuc61Dyo9pGXXkKE=
+google.golang.org/grpc v1.79.3/go.mod h1:KmT0Kjez+0dde/v2j9vzwoAScgEPx/Bw1CYChhHLrHQ=
 google.golang.org/protobuf v1.36.11 h1:fV6ZwhNocDyBLK0dj+fg8ektcVegBBuEolpbTQyBNVE=
 google.golang.org/protobuf v1.36.11/go.mod h1:HTf+CrKn2C3g5S8VImy6tdcUvCska2kB7j23XfzDpco=
 gopkg.in/alecthomas/kingpin.v2 v2.2.6/go.mod h1:FMv+mEhP44yOT+4EoQTLFTRgOQ1FBLkstjWtayDeSgw=
