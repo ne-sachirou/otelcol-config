@@ -48,6 +48,7 @@ jobs:
       - uses: ne-sachirou/lint-gha-reviewdog@47315c74bcffa1c74c12a6e1f004bf6e1fd4147b # v0.0.1
         with:
           fail_on_error: true
+          github_token: ${{ github.token }}
           reporter: github-pr-review
 
   generate-otelcol:
