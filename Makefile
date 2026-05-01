@@ -10,7 +10,7 @@ build-otelcol: ## OpenTelemetry Collectorをbuildする
 
 .PHONY: generate-otelcol-code
 generate-otelcol-code: ## OpenTelemetry Collectorのcodeを生成する
-	go get ./... && go mod tidy && go generate ./...
+	go mod download && go mod tidy && go generate ./...
 
 .PHONY: install-otelcol
 install-otelcol: otelcol/otelcol ## build濟みのOpenTelemetry Collectorをinstallする
