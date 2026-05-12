@@ -23,10 +23,6 @@ receivers:
         endpoint: 0.0.0.0:4317
       http:
         endpoint: 0.0.0.0:4318
-  otlp/c4se:
-    protocols:
-      grpc:
-        endpoint: 0.0.0.0:4319
 
 processors:
   attributes/mypc:
@@ -52,8 +48,6 @@ processors:
 
 exporters:
   mackerel_otlp:
-  mackerel_otlp/c4se:
-    mackerel_api_key: ${env:MACKEREL_APIKEY_C4SE}
   debug:
     verbosity: detailed
 
@@ -76,7 +70,3 @@ service:
       receivers: [otlp]
       processors: [attributes/trace]
       exporters: [debug]
-    metrics/c4se:
-      receivers: [otlp/c4se]
-      processors: []
-      exporters: [mackerel_otlp/c4se]
