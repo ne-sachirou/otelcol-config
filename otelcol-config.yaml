@@ -25,22 +25,26 @@ receivers:
         endpoint: 0.0.0.0:4318
 
 processors:
-  attributes/mypc:
-    actions:
+  # attributes/mypc:
+  #   actions:
+  resource/mypc:
+    attributes:
       - action: upsert
         key: service.namespace
         value: ne-sachirou
-      - action: upsert
+      - action: insert
         key: service.name
         value: ne-sachirou-pc-macbook
-  attributes/trace:
-    actions:
+  # attributes/trace:
+  #   actions:
+  resource/trace:
+    attributes:
       - action: upsert
         key: service.namespace
-        value: debug
-      - action: upsert
+        value: ne-sachirou
+      - action: insert
         key: service.name
-        value: debug
+        value: ne-sachirou-pc-macbook
   resourcedetection/system:
     detectors: ["system"]
     system:
@@ -64,9 +68,9 @@ service:
   pipelines:
     metrics:
       receivers: [hostmetrics, otlp]
-      processors: [attributes/mypc, resourcedetection/system]
-      exporters: [mackerel_otlp]
+      processors: [resource/mypc, resourcedetection/system]
+      exporters: [debug, mackerel_otlp]
     traces:
       receivers: [otlp]
-      processors: [attributes/trace]
+      processors: [resource/trace]
       exporters: [debug]

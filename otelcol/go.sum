@@ -412,6 +412,8 @@ github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributespr
 github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor v0.154.0/go.mod h1:1QrSTFZyvcQS6HCn99mV2gWX61++op6xai4T8tJ1w84=
 github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.154.0 h1:R5bx4Lx/xLj45sKsPQpX8gG4Lb4HL06B6gYrAx0H9LM=
 github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.154.0/go.mod h1:clkq2BgIucWi+LS+BnEY0MFp7xD4T6cPfONZgL5h3+M=
+github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor v0.154.0 h1:/S9EPYljg1Gflzdhc7kjui87JWx0PfhVZXHjLAzQLMM=
+github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor v0.154.0/go.mod h1:s9GzkMITkS+rBEeh8UW1mcwOSlCe4F8bonIDH5M9+AY=
 github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver v0.154.0 h1:YXYcZAtV1jrV480LekM2aERbPE80WpePgiCXTNQBjn0=
 github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver v0.154.0/go.mod h1:G951aGJ/kdBCGeMC1xvNABjBB/g3jQaN87oBq6jNh0c=
 github.com/opencontainers/go-digest v1.0.0 h1:apOUWs51W5PlhuyGyz9FCeeBIOUDA/6nW8Oi/yOhh5U=
