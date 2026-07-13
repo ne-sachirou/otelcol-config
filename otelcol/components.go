@@ -72,7 +72,7 @@ func components() (otelcol.Factories, error) {
 		return otelcol.Factories{}, err
 	}
 	factories.ExporterModules = makeModulesMap(factories.Exporters, map[component.Type]string{
-		mackerelotlpexporter.NewFactory().Type(): "github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.14.1",
+		mackerelotlpexporter.NewFactory().Type(): "github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.15.0",
 		debugexporter.NewFactory().Type(): "go.opentelemetry.io/collector/exporter/debugexporter v0.156.0",
 	})
 
