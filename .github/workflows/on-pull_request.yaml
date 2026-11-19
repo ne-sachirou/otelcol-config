@@ -82,11 +82,11 @@ jobs:
     if: needs.generate-otelcol.result == 'success'
     permissions:
       contents: read
-    uses: ./.github/workflows/wf-validate-otelcol.yaml
+    uses: $/.github/workflows/wf-validate-otelcol.yaml
 
   verify-otelcol-code:
     permissions:
       contents: read
     needs: judge-exec
     if: needs.judge-exec.outputs.otelcol_changed == 'true'
-    uses: ./.github/workflows/wf-validate-otelcol.yaml
+    uses: $/.github/workflows/wf-validate-otelcol.yaml
