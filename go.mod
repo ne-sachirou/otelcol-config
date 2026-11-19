@@ -1,6 +1,6 @@
 module github.com/ne-sachirou/otelcol-config
 
-go 1.26.0
+go 1.26.9
 
 tool go.opentelemetry.io/collector/cmd/builder
 
