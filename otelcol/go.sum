@@ -298,8 +298,8 @@ github.com/linode/go-metadata v0.3.1 h1:F34TL9aF2qNDEViTOxFf9cXOMrdhckczVg3T80h1
 github.com/linode/go-metadata v0.3.1/go.mod h1:4UM6kvph2AQ3PLqMNittnocbeY2R+fYiC47iwIW8LX4=
 github.com/lufia/plan9stats v0.0.0-20260330125221-c963978e514e h1:Q6MvJtQK/iRcRtzAscm/zF23XxJlbECiGPyRicsX+Ak=
 github.com/lufia/plan9stats v0.0.0-20260330125221-c963978e514e/go.mod h1:autxFIvghDt3jPTLoqZ9OZ7s9qTGNAWmYCjVFWPX/zg=
-github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.15.2 h1:8LIeTRWpISkLm4l1xTTBGIOmU9tU89lBOq9aKHqATrY=
-github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.15.2/go.mod h1:HsDhURKacElFglu7K0Wc08J7wiasHZk7pdYv9/J0J1k=
+github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.16.1 h1:f53DUard8nBXoZM5fQPAZch1M6/NqGBHnc8h/wAAnDI=
+github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.16.1/go.mod h1:bu0FNwNbwYm8VrZOUxkTSNzu+Md7yiKaj3+TQOjfxgM=
 github.com/magefile/mage v1.15.0 h1:BvGheCMAsG3bWUDbZ8AyXXpCNwU9u5CB6sM+HNb9HYg=
 github.com/magefile/mage v1.15.0/go.mod h1:z5UZb/iS3GoOSn0JgWuiw7dxlurVYTu+/jHXqQg881A=
 github.com/magiconair/properties v1.8.10 h1:s31yESBquKXCV9a/ScB3ESkOjUYYv+X0rg8SYxI99mE=
