@@ -8,25 +8,25 @@ dist:
 
 receivers:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver v0.165.1
-  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.165.0
+  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.166.0
 
 processors:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor v0.165.1
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.165.1
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor v0.165.1
-  - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.165.0
+  - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.166.0
 
 exporters:
   - gomod: github.com/mackerelio/opentelemetry-collector-mackerel/exporter/mackerelotlpexporter v0.15.2
-  - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.165.0
+  - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.166.0
 
 extensions:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/healthcheckextension v0.165.1
 
 providers:
-  - gomod: go.opentelemetry.io/collector/confmap/provider/envprovider v1.71.0
-  - gomod: go.opentelemetry.io/collector/confmap/provider/fileprovider v1.71.0
-  - gomod: go.opentelemetry.io/collector/confmap/provider/yamlprovider v1.71.0
+  - gomod: go.opentelemetry.io/collector/confmap/provider/envprovider v1.72.0
+  - gomod: go.opentelemetry.io/collector/confmap/provider/fileprovider v1.72.0
+  - gomod: go.opentelemetry.io/collector/confmap/provider/yamlprovider v1.72.0
 
 # The Mackerel exporter requires an older collector root module that still
 # contains internal/statusutil, now provided by its own module.
